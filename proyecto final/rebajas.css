@@ -1,0 +1,368 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   
+}
+
+nav{
+    position: relative;
+   
+}
+
+.navbar-menu{
+    background: black;
+    height: 210px;
+    width: 100%;
+    position: absolute;
+}
+
+.logo{
+    position: absolute;
+    color: white;
+    font-size: 60px;
+    top:8px;
+    left:3%;
+    font-weight: bold;
+}
+
+.navbar-menu ul{
+    float: right;
+    margin-right: 20px;
+    list-style: none;
+}
+
+.nav-options li{
+    display: inline-block;
+    line-height: 127px;
+    margin: 0 5px;
+}
+
+.nav-options li a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Anton', sans-serif;
+    font-size: 22px;
+    padding: 5px 10px;
+}
+
+.nav-options li a:hover{
+border-bottom: solid 3px white;
+}
+
+.nav-options li a:active{
+    border:solid 3px white;
+    }
+    
+.checkbtn{
+    font-size: 35px;
+    color: white;
+    float: right;
+    line-height: 50px;
+    margin-top: 85px;
+    margin-right:50px ;
+    padding: 25px 0;
+    cursor:pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+
+.container {
+	position: absolute;
+	left: 80%;
+	top: 73%;
+	transform: translate(-50%,-50%);
+    
+}
+
+input {
+	outline: none;
+	height: 30px;
+	padding: 0 20px;
+	color: #000;
+	font-size: 20px;
+    background-color: black;
+	transition: all .7s ease;
+    border: transparent;
+    border-bottom: 3px solid white;
+}
+
+::placeholder {
+	color: rgb(255, 255, 255);
+}
+
+.btn{
+    color: white;
+    position: absolute;
+    top: 22%;
+    left: 92%;
+}
+
+.carrito{
+    color: white;
+    position: absolute;
+    top: 70%;
+    left: 93%;
+}
+
+.favorito{
+    color: white;
+    position: absolute;
+    top: 70%;
+    left: 96%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#redes{
+    position:fixed;
+    left: 96%;
+    top: 50%;
+    width: 36px;
+   
+}
+
+#footer{
+    text-align: center;
+    background-color: black;
+    width: 100%;
+    height: 70px;
+    font-size: 15px;
+    color: white;
+    align-content: center;
+    margin-top: 10%;   
+}
+
+
+
+
+
+
+
+
+
+
+@media(max-width:768px){
+    .checkbtn{
+        display: block;
+        position: absolute;
+        left: 65%;
+    }
+    .nav-options{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        top:20px;
+        left: -100%;
+        text-align: center;
+    }
+
+    .nav-options li{
+        display: block;
+        border-bottom: 1px solid rgb(163, 163, 163);
+    }
+
+    .nav-options li a{
+        font-size: 18px;
+    }
+
+    .nav li:hover{
+        color: aqua;
+    }
+
+    .nav li a:hover{
+        color: brown;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    .form{
+        display: inline;
+    }
+
+    .carrito{
+        display: block;
+        position: absolute;
+        top: 59%;
+    }
+
+    .favorito{
+        display: block;
+        position: absolute;
+        top: 59%;
+        left: 84%;
+    }
+
+    .container{
+       display: none;
+    }
+
+    .buscador{
+        display: block;
+        position: absolute;
+        top: 59%;
+        left: 75%; 
+        color: white;
+    }
+    .banner {
+        text-align: left;
+      }
+    
+      .banner__container {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0 30px;
+      }
+    
+      .button {
+        margin-right: auto;
+
+      }
+    }
+
+@media(max-width:1024px){
+    .logo{
+        padding-left: 40px;
+    }
+
+    .nav-options li a{
+        font-size: 16px;
+        padding: 7px 10px;
+    }
+
+    .banner{
+        height: 89vh;
+    }
+    .banner-content img{
+        margin-top:50px;
+
+    }
+
+    .container{
+        position: absolute;
+        left: 68%;
+    }
+
+}
+
+
+
+
+
+.scrolling-container{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.scrolling-card{
+    flex: 0 0 auto;
+
+    /*border: solid 1px black;*/
+    margin: 15px;
+    width: 400px;
+    height: 300px;
+    text-align: center;
+}
+
+.scrolling-container::-webkit-scrollbar{
+    display: none;
+}
+
+.scrolling-buttons-container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 300px;
+    margin-left: 25px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+
+.section-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 14.5rem;
+    margin-left: 10rem;
+    
+}
+
+.shop{
+    margin-top: 2rem;
+}
+
+.shop-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,auto));
+    gap: 1.5rem;
+    padding: 2%;
+    /*border: solid 4px black;*/
+    text-align: center;
+}
+
+.product-box{
+    position: relative;
+}
+
+.product-box:hover{
+    padding: 10px;
+    border: 3px solid black;
+    transition: 0.4s;
+}
+
+.product-img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.product-title{
+ font-size: 1.1rem;
+font-weight: 600;
+text-transform: uppercase;
+margin-bottom: 0.5rem;
+font-family: 'Oswald', sans-serif;
+}
+
+.precio{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.boton{
+    font-size: 15px;
+    padding: 5px;
+}
+
+.boton:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border: solid 3px black;
+    
+}
